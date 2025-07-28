@@ -30,8 +30,11 @@ h6 {
   font-family: "Gloock", serif;
 }
 
-nav {
+.navbar {
   background-color: var(--sec-black);
+}
+.navbar-brand{
+    color: var(--gray-color);
 }
 .search-input {
   width: 40%;

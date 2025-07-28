@@ -19,23 +19,36 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="py-3">
-      <div class="container d-flex align-items-center">
-        <h2>Task Manager</h2>
-        <div class="search-input mx-auto">
-          <input
-            type="search"
-            class="form-control"
-            placeholder="Search Tasks"
-            autocomplete="off"
-            id="searchInput"
-          />
-        </div>
-        <div class="icons d-flex align-items-center gap-3">
-          <i class="fa-regular fa-circle-question"></i>
-          <i class="fa-solid fa-bell"></i>
-          <span>user Name <i class="fa-solid fa-angle-down fa-sm"></i></span>
-          <i class="fa-solid fa-user"></i>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#"> <h2>Task Manager</h2></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="search-input mx-auto">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search Tasks"
+              autocomplete="off"
+              id="searchInput"
+            />
+          </div>
+          <div class="icons d-flex align-items-center gap-3">
+            <i class="fa-regular fa-circle-question"></i>
+            <i class="fa-solid fa-bell"></i>
+            <span>user Name <i class="fa-solid fa-angle-down fa-sm"></i></span>
+            <i class="fa-solid fa-user"></i>
+          </div>
         </div>
       </div>
     </nav>
@@ -68,7 +81,7 @@
       <div class="tasks-cards">
         <div class="container">
           <div class="row">
-            <div class="to-do col-md-5 col-lg-4">
+            <div class="to-do col-md-12 col-lg-4 mb-md-2 mb-sm-2">
               <div class="card-content border-2">
                 <div
                   class="header d-flex justify-content-between align-items-center py-2 px-3"
@@ -80,7 +93,7 @@
                 <div class="tasks p-3" id="toDo"></div>
               </div>
             </div>
-            <div class="In-progress col-md-5 col-lg-4">
+            <div class="In-progress col-md-12 col-lg-4 mb-md-2 mb-sm-2">
               <div class="card-content">
                 <div
                   class="header d-flex justify-content-between align-items-center py-2 px-3"
@@ -92,7 +105,7 @@
                 <div class="tasks p-3" id="Inprogress"></div>
               </div>
             </div>
-            <div class="Completed col-md-5 col-lg-4">
+            <div class="Completed col-md-12 col-lg-4 mb-md-2 mb-sm-2">
               <div class="card-content">
                 <div
                   class="header d-flex justify-content-between align-items-center py-2 px-3"
