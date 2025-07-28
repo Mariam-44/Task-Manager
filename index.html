@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Nothing+You+Could+Do&family=Playwrite+AU+NSW:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="py-3">
+      <div class="container d-flex align-items-center">
+        <h2>Task Manager</h2>
+        <div class="search-input mx-auto">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search Tasks"
+            autocomplete="off"
+            id="searchInput"
+          />
+        </div>
+        <div class="icons d-flex align-items-center gap-3">
+          <i class="fa-regular fa-circle-question"></i>
+          <i class="fa-solid fa-bell"></i>
+          <span>user Name <i class="fa-solid fa-angle-down fa-sm"></i></span>
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="content-header">
+        <div class="container d-flex justify-content-between">
+          <button
+            id="newTask"
+            class="btn btn-new-task bg-body-secondary d-flex align-items-center mb-5 fw-semibold"
+          >
+            <i class="fa-solid fa-plus fa-sm me-2 mt-1"></i> Add New Task
+          </button>
+
+          <div class="user-customize d-flex gap-2">
+            <div class="time-options">
+              <select
+                class="form-select time-select form-select-sm"
+                aria-label="Small select example"
+              >
+                <option selected>Today Tasks</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="thisWeek">This Week</option>
+                <option value="lastWeek">Last Week</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tasks-cards">
+        <div class="container">
+          <div class="row">
+            <div class="to-do col-md-5 col-lg-4">
+              <div class="card-content border-2">
+                <div
+                  class="header d-flex justify-content-between align-items-center py-2 px-3"
+                >
+                  <h2 class="m-0 text-capitalize">To do</h2>
+                  <span id="todoCount">0</span>
+                </div>
+
+                <div class="tasks p-3" id="toDo"></div>
+              </div>
+            </div>
+            <div class="In-progress col-md-5 col-lg-4">
+              <div class="card-content">
+                <div
+                  class="header d-flex justify-content-between align-items-center py-2 px-3"
+                >
+                  <h2 class="m-0 text-capitalize">In progress</h2>
+                  <span id="progressCount">0</span>
+                </div>
+
+                <div class="tasks p-3" id="Inprogress"></div>
+              </div>
+            </div>
+            <div class="Completed col-md-5 col-lg-4">
+              <div class="card-content">
+                <div
+                  class="header d-flex justify-content-between align-items-center py-2 px-3"
+                >
+                  <h2 class="m-0 text-capitalize">Completed</h2>
+                  <span id="CompletedCount">0</span>
+                </div>
+
+                <div class="tasks p-3" id="Completed"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tasks-form bg-black bg-opacity-75 position-absolute start-0 top-0 end-0 bottom-0 d-none justify-content-center align-items-center"
+        id="tasks-form"
+      >
+        <div
+          class="container d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="mb-3 w-50">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="status"
+            >
+              <option selected>Select Task Status</option>
+              <option value="toDo">To Do</option>
+              <option value="inProgress">In progress</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+
+          <div class="mb-3 w-50">
+            <label for="title" class="form-label"></label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              placeholder="Task Title"
+            />
+          </div>
+          <div class="mb-3 w-50">
+            <label for="Description" class="form-label"></label>
+            <textarea
+              class="form-control"
+              id="Description"
+              rows="3"
+              placeholder="Task Description"
+            ></textarea>
+          </div>
+          <button
+            class="btn btn-new-task w-25 mt-2 mx-auto fw-semibold"
+            id="addBtn"
+          >
+            Add Task
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

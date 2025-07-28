@@ -1,0 +1,95 @@
+:root {
+  --main-black: #0d1117;
+  --sec-black: #2b2f34;
+  --mid-gray: #434444;
+  --gray-color: #dadada;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--main-black);
+  color: var(--gray-color);
+}
+
+#addBtn{
+    background-color:var(--gray-color);
+    color: var(--mid-gray);
+    
+}
+
+.btn:hover {
+    color: var(--sec-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gloock", serif;
+}
+
+nav {
+  background-color: var(--sec-black);
+}
+.search-input {
+  width: 40%;
+}
+
+.icons,
+i {
+  cursor: pointer;
+}
+
+.form-select.time-select {
+  border: 0;
+}
+
+.content-header {
+  margin-top: 110px;
+}
+.tasks.list-view .task {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-form {
+  z-index: 9999999;
+}
+
+.form-control.form-control-color {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 0;
+}
+
+.card-content {
+  border-radius: 7px;
+  background-color: var(--sec-black);
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+textarea {
+  min-height: 150px;
+  max-height: 300px;
+}
+
+.tasks {
+  border-radius: 7px;
+  margin-bottom: 7px;
+}
+
+.task {
+ background-color: var(--main-black);
+}
+
+.dropdrag-hover {
+  outline: 2px dashed #fff;
+  background-color: var(--sec-black);
+  transition: all 0.2s ease;
+  height: 180px;
+}
